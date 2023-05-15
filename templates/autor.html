@@ -1,0 +1,71 @@
+{% extends 'sablona.html' %}
+{% block nav %}
+<div class="fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="collapse navbar-collapse container"  id="navbarNav">
+            <ul class="navbar-nav mr-autox ps-5">
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Správa pojištěnců</a></li>
+                <li class="nav-item"><a href="{{ url_for('o_aplikaci') }}" class="nav-link">O aplikaci</a></li>
+                <li class="nav-item"><a href="{{ url_for('autor') }}" class="nav-link active">Autor aplikace</a></li>
+            </ul>
+        </div>
+        <a href="{{ url_for('index') }}" class="navbar-brand mb-0 h1">Evidence pojištěnců</a>
+    </nav>                    
+</div>
+{% endblock %}
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <article>
+        <div class="container mt-4" id="centr">
+            <header>
+                <h1>Aleš Trnka, DiS.</h1>
+            </header>
+            <section class="mt-4">
+                <div class=>
+                    <div></div>
+                        <p>
+                            Doufám, že se Vám aplikace líbila. Zde je pár informací o mně.
+                        </p>
+                        <p>Jmenuji se Aleš Trnka a je mi 37 let. Baví mě programování. Nadchl mě Python a HTML, jež se staly mým koníčkem. Absolvoval jsem rekvalifikační kurz Pythonu a HTML a prošel prezenčními školeními. Dále se v těchto jazycích zdokonaluji a učím se novým věcem. 
+                        
+                            Kontaktovat mě můžete na E-mailu:  <strong>A.Trnka(zavináč)seznam.cz</strong>.
+                        </p>
+                        <p>
+                            Mám rád hudbu, film, počítače, pravidelně sportuji a cvičím. I přes své pohybové omezení (chodím o francouzských holích, delší vzdálenosti jezdím na vozíku), mám dobrou kondici, sport je mou zálibou.
+                        </p>
+                        <p>
+                            Mým hlavním koníčkem je florbal, jízda na handbiku a <strong>programování</strong>, které se doufám stane brzy i mým zaměstnáním!
+                        </p>
+                    </div>
+                </div>
+                <div id="centr" class="dovednosti">
+                    <table>
+                        <tr class="centrovany">
+                            <td>
+                                <img src="static/obr/html.png" alt="HTML" />
+                            </td>
+                            <td>
+                                <img src="static/obr/python.png" alt="Python" />
+                            </td>
+                        </tr>
+                        <tr class="centrovany">
+                            <td>
+                                <h2>HTML</h2>
+                                <p>Umím vytvořit jednoduché webové stránky, jako jsou např. na mém Github profilu. Prošel jsem rekvalifikační kurz a dále se vzdělávám z tutoriálů a dokumentace k HTML.</p>
+                            </td>
+                            <td>
+                                <h2>Python</h2>
+                                <p>V Pythonu umím programovat konzolové aplikace. Dále se v tomto jazyce zdokonaluji a zajímám se i o Flask.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </article>
+
+
+{% endblock content %}

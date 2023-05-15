@@ -1,0 +1,51 @@
+{% extends "sablona.html" %}
+{% block header %}
+  <div class="h1 mt-5 pt-3">
+    Registrace pojištěnce
+  </div>
+{% endblock %}
+
+{% block content %}
+<div class="row-justify-content-center my-5">
+  <div class="col-lg-5">
+    <form action="" method="post">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.jmeno.label(class="form-label")}}
+        {{ form.jmeno(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.prijmeni.label(class="form-label")}}
+        {{ form.prijmeni(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.vek.label(class="form-label")}}
+        {{ form.vek(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.email.label(class="form-label")}}
+        {{ form.email(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.telefon.label(class="form-label")}}
+        {{ form.telefon(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.ulice.label(class="form-label")}}
+        {{ form.ulice(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.mesto.label(class="form-label")}}
+        {{ form.mesto(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.psc.label(class="form-label")}}
+        {{ form.psc(class="form-control mb-2" )}}
+      </div>
+        
+      <p>{{ form.potvrdit(class="btn btn-outline-dark btn-lg mt-2 fw-bold") }}</p>
+    </form>
+  </div>
+    
+    <hr>
+{% endblock content %}

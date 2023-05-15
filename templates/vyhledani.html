@@ -1,0 +1,34 @@
+{% extends "sablona.html" %}
+{% block header %}
+<div class="h2 mt-5 pt-3">
+  Vyhledání pojištěného
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row-justify-content-center my-5">
+  <div class="col-lg-5">
+    <form action="" method="post">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.jmeno.label(class="form-label")}}
+        {{ form.jmeno(class="form-control mb-2" )}}
+      </div>
+      <div>
+        {{ form.prijmeni.label(class="form-label")}}
+        {{ form.prijmeni(class="form-control mb-2" )}}
+      </div>
+      <p>{{ form.potvrdit(class="btn btn-outline-dark btn-lg mt-2 fw-bold")}}</p>
+    </form>
+  </div>
+</div>
+
+    <hr>
+    {% if vysledek %}
+      <small>Nalezený záznam:</small><br> 
+      <span class="h2">{{ vysledek[0][1] }} {{ vysledek[0][2] }}, {{ vysledek[0][3] }} let</span> <br><br>
+      <div class="h5">Email:  {{ vysledek[0][4] }}<br>Telefon:  {{ vysledek[0][5] }}<br>Ulice a ČP:  {{ vysledek[0][6] }}<br>
+        Město:  {{ vysledek[0][7] }}<br>PSČ:  {{ vysledek[0][8] }}</div>
+    {% endif %}
+</div>
+{% endblock content %}
